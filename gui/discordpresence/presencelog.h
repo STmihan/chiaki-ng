@@ -1,0 +1,10 @@
+// SPDX-License-Identifier: LicenseRef-AGPL-3.0-only-OpenSSL
+
+#ifndef CHIAKI_DISCORDPRESENCE_PRESENCELOG_H
+#define CHIAKI_DISCORDPRESENCE_PRESENCELOG_H
+
+#include <QLoggingCategory>
+
+Q_DECLARE_LOGGING_CATEGORY(chiakiDiscord)
+
+#endif // CHIAKI_DISCORDPRESENCE_PRESENCELOG_H
