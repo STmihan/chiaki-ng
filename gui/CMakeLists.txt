@@ -159,3 +159,6 @@ install(TARGETS chiaki
 install(FILES chiaking.desktop DESTINATION share/applications)
 install(FILES chiaking.png DESTINATION share/icons/hicolor/512x512/apps)
 install(FILES io.github.streetpea.Chiaki4deck.appdata.xml DESTINATION share/metainfo)
+
+# Fork addition: Discord Rich Presence (see gui/discordpresence/)
+include(discordpresence/discordpresence.cmake)

@@ -7,6 +7,7 @@
 #include "psntoken.h"
 #include "systemdinhibit.h"
 #include "chiaki/remote/holepunch.h"
+#include "discordpresence.h"
 #ifdef Q_OS_MACOS
 #include "macWakeSleep.h"
 #elif defined(Q_OS_WINDOWS)
@@ -1103,6 +1104,7 @@ void QmlBackend::createSession(const StreamSessionConnectInfo &connect_info)
         emit error(tr("Stream failed"), tr("Failed to initialize Stream Session: %1").arg(e.what()));
         return;
     }
+    DiscordPresence::Attach(session);
 
     connect(session, &StreamSession::FfmpegFrameAvailable, frame_thread->parent(), [this, use_opengl_renderer]() {
         ChiakiFfmpegDecoder *decoder = session->GetFfmpegDecoder();
