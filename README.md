@@ -69,3 +69,8 @@ All code of the feature is new and kept separate, so merging upstream stays pain
 - `gui/CMakeLists.txt` — one `include()` line at the end;
 - `gui/src/qmlbackend.cpp` — one `#include` and one `DiscordPresence::Attach(session)` call;
 - `README.md` — this section.
+
+CI fix, not related to the feature: MSYS2 dropped `mingw-w64-x86_64-hidapi`, so the manual
+Windows build (`.github/workflows/build-msys2.yml`) uses the UCRT64 environment instead of
+MINGW64, and `scripts/build-libplacebo-windows.sh` installs into `$MINGW_PREFIX` instead of a
+hardcoded `/mingw64` (same result under MINGW64).
