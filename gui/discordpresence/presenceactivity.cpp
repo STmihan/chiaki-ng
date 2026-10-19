@@ -70,6 +70,10 @@ QJsonObject Idle()
 		{ "type", 0 },
 		{ "details", QStringLiteral("Idle") },
 		{ "state", QStringLiteral("No game running") },
+		{ "assets", QJsonObject {
+			{ "large_image", kBadgeKey },
+			{ "large_text", QStringLiteral("PS5") },
+		} },
 	};
 }
 
